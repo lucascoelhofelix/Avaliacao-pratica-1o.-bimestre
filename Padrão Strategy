@@ -8,4 +8,5 @@ sem saber os detalhes de sua implementação. Isso atende ao requisito de tratar
 Respeito às Regras Específicas: Cada lógica de cálculo (Terrestre, Aéreo, Marítimo) é encapsulada em sua própria classe (Estratégia concreta)
 respeitando assim as regras específicas de cada modalidade.
 Princípio Aberto/Fechado (OCP): Se uma nova modalidade de transporte (ex: Ferroviário) for adicionada no futuro
-basta criar uma nova classe de estratégia que implemente a interface comum. O código da CalculadoraDeFrete (o Contexto) não precisa ser modificado, garantindo a flexibilidade da arquitetura.
+basta criar uma nova classe de estratégia que implemente a interface comum.
+O código da CalculadoraDeFrete (o Contexto) não precisa ser modificado, garantindo a flexibilidade da arquitetura.
