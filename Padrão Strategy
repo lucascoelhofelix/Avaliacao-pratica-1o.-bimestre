@@ -1,0 +1,11 @@
+O padrão de projeto escolhido para essa solução é o Strategy (Estratégia).
+
+Por que o Strategy?
+
+O padrão Strategy é ideal para este problema porque ele permite definir uma família de algoritmos (os diferentes cálculos de frete) e tornar esses algoritmos intercambiáveis.
+
+    Generalização e Flexibilidade: Ele permite que a classe CalculadoraDeFrete (o Contexto) use qualquer algoritmo de cálculo (as Estratégias) sem saber os detalhes de sua implementação. Isso atende ao requisito de tratar todos os tipos de transporte de forma genérica.
+
+    Respeito às Regras Específicas: Cada lógica de cálculo (Terrestre, Aéreo, Marítimo) é encapsulada em sua própria classe (Estratégia concreta), respeitando assim as regras específicas de cada modalidade.
+
+    Princípio Aberto/Fechado (OCP): Se uma nova modalidade de transporte (ex: Ferroviário) for adicionada no futuro, basta criar uma nova classe de estratégia que implemente a interface comum. O código da CalculadoraDeFrete (o Contexto) não precisa ser modificado, garantindo a flexibilidade da arquitetura
