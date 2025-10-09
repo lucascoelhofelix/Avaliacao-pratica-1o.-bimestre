@@ -1,0 +1,11 @@
+O padrão de projeto escolhido para essa solução é o Factory Method (Método de Fábrica).
+Por que o Factory Method?
+O Factory Method é um padrão de criação (creational) que oferece uma interface para a criação de um objeto em uma superclasse,
+mas permite que as subclasses alterem o tipo de objeto que será criado.
+Desacoplamento: Ele remove a responsabilidade de instanciar classes concretas (como ProcessadorCartao) do código "Cliente" (a classe que utiliza o processador).
+O Cliente opera apenas com a interface comum (ProcessadorPagamento).
+Princípio Aberto/Fechado (OCP): Ao invés de usar uma Fábrica Simples centralizada (que violaria o OCP com um switch/if a cada novo tipo).
+O Factory Method delega a responsabilidade de criação para subclasses de Fábrica. Se um novo meio de pagamento for adicionado,
+basta criar uma nova subclasse de fábrica, sem modificar as classes de fábrica ou processadores existentes.
+Encapsulamento da Lógica de Criação: A lógica de como um objeto é criado (se precisa de parâmetros específicos, configuração inicial, etc.)
+É encapsulada dentro da sua respectiva classe de fábrica, tornando o código principal mais limpo e focado no uso, e não na criação.
