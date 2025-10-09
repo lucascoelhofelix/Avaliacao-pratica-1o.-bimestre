@@ -1,0 +1,11 @@
+O padrão de projeto escolhido para essa solução é o Observer (Observador).
+Por que o Observer?
+O padrão Observer é um padrão comportamental que define uma dependência um-para-muitos entre objetos, de modo que quando um objeto muda de estado,
+todos os seus dependentes são notificados e atualizados automaticamente.
+Desacoplamento Forte: Ele atende ao requisito de isolar o Assunto (TopicoNoticias) dos Observadores (Leitor).
+O tópico (Assunto) não precisa saber a classe concreta ou os detalhes de implementação de um leitor;
+ele apenas interage com a interface Observador.
+Transmissão Automática: A função principal é cumprida: uma mudança de estado no tópico (a publicação da notícia)
+aciona automaticamente a notificação para todos os leitores inscritos.
+Flexibilidade Dinâmica: O padrão fornece métodos claros (inscrever, desinscrever)
+para que os leitores possam entrar ou sair da lista de notificação a qualquer momento (em tempo de execução), sem a necessidade de modificar o código central do tópico.
