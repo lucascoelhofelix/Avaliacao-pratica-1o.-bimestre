@@ -1,0 +1,9 @@
+O padrão de projeto escolhido para essa solução é o Decorator (Decorador).
+Por que o Decorator?
+O Decorator é um padrão estrutural que permite anexar responsabilidades adicionais a um objeto de forma dinâmica e transparente, sem alterar sua estrutura.
+Extensão Flexível (Alternativa à Herança): Em vez de usar herança para criar subclasses para cada combinação de funcionalidades (ex: RelatorioComEstatisticasEGraficos).
+O Decorator usa Composição. Isso evita a explosão de classes que o uso extensivo de herança causaria, mantendo o código flexível e fácil de gerenciar.
+Transparência: O Decorator e o Componente implementam a mesma interface (Relatorio), garantindo que o código cliente possa interagir com o objeto decorado (o Relatório com estatísticas).
+Exatamente da mesma forma que interage com o objeto original (o Relatório Básico).
+Princípio Aberto/Fechado (OCP): O código existente do Relatório Básico é Fechado para modificação, mas o sistema é Aberto para extensão (adicionando novos decoradores, como ExportacaoPDFDecorator).
+Atendendo ao requisito principal.
